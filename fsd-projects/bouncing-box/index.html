@@ -45,7 +45,9 @@
 
         // update the boardWidth variable when the window is resized
         jQuery(window).on("resize", function () {
-          moveBoxTo(positionX) = board.width();
+          moveBoxTo(positionX) = moveBoxTo(positionX)
+
+();
         });
 
         // Every 50 milliseconds, call the update Function (see below)
@@ -57,7 +59,9 @@
         // moves the Box to a new position on the screen along the X-Axis
         function moveBoxTo(newPositionX) {
           box.css("left", newPositionX);
+       
         }
+
 
         // changes the text displayed on the Box
         function changeBoxText(newText) {
@@ -82,8 +86,8 @@ var positionX = 0
          * If the box drifts off the screen, turn it around!
          */
         function update(positionX = positionX + 10 ) {
-
-        
+moveBoxTo(200);
+        positionX = positionX + 10; 
 
           
         }
@@ -96,6 +100,8 @@ var positionX = 0
          * - move the box to the left side of the screen.
          */
         function handleBoxClick() {
+positionX = 0;
+changeBoxText(0);
 
 
 
